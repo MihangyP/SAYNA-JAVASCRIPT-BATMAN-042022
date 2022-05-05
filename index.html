@@ -19,8 +19,8 @@
                 <img src="./Assets/Logos/logohome.png" alt="logo batman">
             </div>
             <div class="menus">
-                <a class="active" href="">HOME</a>
-                <a href="">GAME</a>
+                <a class="active" href="index.html">HOME</a>
+                <a href="game.html">GAME</a>
             </div>
         </nav>
         <!-- la partie accueil au début -->
@@ -36,22 +36,24 @@
                 <button>les adversaires</button>
             </div>
             <div class="social-right">
-                <img src="./Assets/Logos/logo_bat_flèche.png" alt="logo flèche batman haut">
+                <a href="index.html"><img src="./Assets/Logos/logo_bat_flèche.png" alt="logo flèche batman haut"></a>
                 <div class="réseaux">
                   <img src="./Assets/Logos/icon_facebook.png" alt=""> 
                   <img src="./Assets/Logos/icon_ig.png" alt="">
                   <img src="./Assets/Logos/icon_tw.png" alt="">
                 </div>
-                <img src="./Assets/Logos/logo_bat_flèche_2.png" alt="logo flèche batman bas">
+                <a href="#bas"><img src="./Assets/Logos/logo_bat_flèche_2.png" alt="logo flèche batman bas"></a>
             </div>
         </section>
        
     </header> 
+    <!-- fin en-tête -->
+    <!-- main -->
     <section class="cinéma">
             <img class="flèche-bas" src="./Assets/Logos/flèche_down_header.png" alt="">
             <div class="description">
                 <h1>batman au cinéma</h1>
-                <p>
+                <p class="sous-itre">
                     Le personnage de Batman est un super héros de l’univers de DC Comics. Il a été créé par le 
                     dessinateur Bob Kane et le scénariste Bill Finger et apparaît pour la première fois dans le 
                     comic book Detective Comics en 1939. Batman se différencie de Superman, alors héros 
@@ -79,7 +81,7 @@
     </section>
     <section class="nemesis">
         <h1>némésis</h1>
-        <p>
+        <p class="sous-titre">
             Batman souhaite éradiquer la criminalité de Gotham. C’est pourquoi, il affrontera la plupart 
             du temps, des vilains sans capacités surnaturelles mais particulièrement violents ou 
             psychopathes. Avec son introduction dans la Justice League il aura l’occasion de se 
@@ -182,8 +184,9 @@
             </div>
            
         </div>
+        <!-- fin main -->
     </section>
-    <footer>
+    <footer id="bas">
        <img src="./Assets/Logos/icon_WB.png" alt=""><p class="inline"> Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & Snyder & Reeves</p>
         <div class="parentLogo">
            <div class="logoSayna">
@@ -197,6 +200,11 @@
                 <a href=""><img src="./Assets/Logos/icon_tw.png" alt=""></a>
            </div>
         </div>
+
+
+
+        <!-- lien vers le fichier js -->
+        <script src="./JS/index.js"></script>
         
     </footer>
 </body>

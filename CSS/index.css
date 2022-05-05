@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
     color: #fff;
     background: #000;
@@ -19,6 +23,15 @@ h1 {
     font-size: 36px;
 
     text-transform: uppercase;
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+/* effet fade in pour les titres (activé avec js) */
+.visible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.49,0,.03,1);
 }
 
 p{
