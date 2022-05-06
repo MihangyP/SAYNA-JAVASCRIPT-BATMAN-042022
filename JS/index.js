@@ -45,7 +45,7 @@ const ratio = .4;
 const options = {
     root: null,
     rootMargin: '0px',
-    threshold: ratio // dès que 10% du titre est visible, on déclenche l'animation fade in
+    threshold: ratio // dès que 40% du titre est visible, on déclenche l'animation fade in
   }
   
   const fadeIn = function (entries, observer) {
@@ -62,3 +62,105 @@ const options = {
     observer.observe(r);
   });
 
+
+  //effet fondu sur tous les contenus du site
+  
+  const fonduOpacity = function (entries, observer2) {
+      entries.forEach(function (entry) {
+          if(entry.intersectionRatio > ratio) {
+                entry.target.classList.add('fondu-visible');
+                observer2.unobserve(entry.target);
+          } 
+      }) 
+  }
+
+  const observer2 = new IntersectionObserver(fonduOpacity, options);
+  document.querySelectorAll('.fondu').forEach(function(r) {
+    observer2.observe(r);
+  });
+
+  //effet zoom à l'aparition des images
+
+  const zoomImage = function (entries, observer3) {
+    entries.forEach(function (entry) {
+        if(entry.intersectionRatio > ratio) {
+              entry.target.classList.add('zoom-visible');
+              observer3.unobserve(entry.target);
+        } 
+    }) 
+}
+
+const observer3 = new IntersectionObserver(zoomImage, options);
+document.querySelectorAll('.zoom').forEach(function(r) {
+  observer3.observe(r);
+});
+
+//effet zoom sur les images au survole
+const imgActeurs = document.querySelectorAll('.one .zoom');
+const imgActeur1 = imgActeurs[0];
+const imgActeur2 = imgActeurs[1];
+const imgActeur3 = imgActeurs[2];
+
+const acteurs = document.querySelectorAll('.acteur');
+const acteur1 = acteurs[0];
+const acteur2 = acteurs[1];
+const acteur3 = acteurs[2];
+
+imgActeur1.addEventListener('mouseover', function (e) {
+    acteur1.classList.add('acteur-visible');
+})
+imgActeur1.addEventListener('mouseout', function (e) {
+    acteur1.classList.remove('acteur-visible');
+})
+
+imgActeur2.addEventListener('mouseover', function () {
+    acteur2.classList.add('acteur-visible');
+})
+imgActeur2.addEventListener('mouseout', function () {
+    acteur2.classList.remove('acteur-visible');
+})
+
+imgActeur3.addEventListener('mouseover', function () {
+    acteur3.classList.add('acteur-visible');
+})
+imgActeur3.addEventListener('mouseout', function () {
+    acteur3.classList.remove('acteur-visible');
+})
+
+//slider dans la partie nemesis
+
+const imgSlide = document.querySelectorAll('.multimedia .none');
+const nbSlide = imgSlide.length;
+const precedent = document.querySelector('.précédent');
+const suivant = document.querySelector('.suivant');
+let count = 0;
+
+function slideSuivant () {
+    imgSlide[count].classList.remove('none-active');
+
+    if(count < nbSlide - 1) {
+        count++;
+    } else {
+        count = 0
+    }
+
+    imgSlide[count].classList.add('none-active');
+}
+
+suivant.addEventListener('click', slideSuivant);
+
+function slidePrécédent () {
+    imgSlide[count].classList.remove('none-active');
+
+    if(count > 0) {
+        count--;
+    } else {
+        count = nbSlide - 1;
+    }
+
+    imgSlide[count].classList.add('none-active');
+}
+
+precedent.addEventListener('click', slidePrécédent);
+
+//slider avec les citations qui défile autromatique 

@@ -24,7 +24,7 @@ h1 {
 
     text-transform: uppercase;
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translateX(-100px);
 }
 
 /* effet fade in pour les titres (activé avec js) */
@@ -32,6 +32,24 @@ h1 {
     opacity: 1;
     transform: translateX(0);
     transition: 1s cubic-bezier(.49,0,.03,1);
+}
+
+/* effet fondu de tous les contenus du site */
+.fondu {
+    opacity: 0;
+}
+.fondu-visible {
+    opacity: 1;
+    transition: 1s cubic-bezier(.49,0,.03,1);
+}
+
+/* effet zoom sur à l'apparition des images */
+.zoom {
+    transform: scale(0);
+}
+.zoom-visible {
+    transform: scale(1);
+    transition: 1s;
 }
 
 p{
@@ -52,7 +70,7 @@ header{
         justify-content: space-between;
         align-items: center;
         /* background: red; */
-        border: 3px solid rgba(255, 255, 255, 0.247);
+        border: 3px solid  #bcbbbd70;
         border-top: none;
     }
     .menus{
@@ -76,7 +94,7 @@ header{
         /* background: red; */
         margin-left: 7%;
         margin-right: 7%;
-        border: 3px solid rgba(255, 255, 255, 0.247);
+        border: 3px solid  #bcbbbd70;
         border-bottom: none;
 
         position: relative;
@@ -106,7 +124,6 @@ header{
         background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(177, 51, 19));
         border: none;
     }
-
         /* les réseaux sociaux à droite */
     .social-right{
         position: absolute;
@@ -128,7 +145,7 @@ header{
     background: #000;
     margin-left: 7%;
     margin-right: 7%;
-    border: 3px solid rgba(255, 255, 255, 0.247);
+    border: 3px solid #bcbbbd70;
     border-top: none; 
     border-bottom: none;
     padding: 7%;
@@ -146,18 +163,88 @@ header{
     margin-top: 10%;
 }
 
+/* visible  */
+.acteur div{
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(177, 51, 19));
+    padding: 0.5em 1em;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family:'Space Grotesk', sans-serif;
+}
+.acteur div span{
+    color: #FFF000;
+}
+.acteur img{
+    position: relative;
+    top: 70px;
+    right: 15px;
+}
+.acteur{
+    position: relative;
+    bottom: 200px;
+    opacity: 0;
+}
+.acteur-visible {
+    opacity: 1;
+    transition: .6s;
+}
+/* effet zoom aux images au survole*/
+.card1:hover, .card2:hover, .card3:hover{
+    transform: scale(1.2);
+    transition: .6s;
+}
 /* partie image au milieu qui change automatiquement */
 .imageChange {
     height: 75vh;
     background-image: url(/Assets/Illustrations/Home/Batslider1.png);
+    animation: change 35s ease-in-out infinite alternate forwards;
 }
+
 .border{
     height: 75vh;
     margin-left: 7%;
     margin-right: 7%;
-    border: 3px solid rgba(255, 255, 255, 0.247);
+    border: 3px solid  #bcbbbd70;
     border-top: none; 
     border-bottom: none;
+}
+
+/* animation changement d'image (le background change automatiquemet) */
+@keyframes change {
+    0%{
+        background-image: url(/Assets/Illustrations/Home/Batslider1.png);
+    }
+    10%{
+        background-image: url(/Assets/Illustrations/Home/Batslider2.png);
+    }
+    20%{
+        background-image: url(/Assets/Illustrations/Home/Batslider3.png);
+    }
+    30%{
+        background-image: url(/Assets/Illustrations/Home/Batslider4.png);
+    }
+    40%{
+        background-image: url(/Assets/Illustrations/Home/Batslider5.png);
+    }
+    50%{
+        background-image: url(/Assets/Illustrations/Home/Batslider6.png);
+    }
+    60%{
+        background-image: url(/Assets/Illustrations/Home/Batslider7.png);
+    }
+    70%{
+        background-image: url(/Assets/Illustrations/Home/Batslider8.png);
+    }
+    80%{
+        background-image: url(/Assets/Illustrations/Home/Batslider9.png);
+    }
+    90%{
+        background-image: url(/Assets/Illustrations/Home/Batslider10.png);
+    }
+    100%{
+        background-image: url(/Assets/Illustrations/Home/Batslider10.png);
+    }
 }
 
 .nemesis{
@@ -165,7 +252,7 @@ header{
     margin-right: 7%;
     padding: 7%;
     text-align: justify;
-    border: 3px solid rgba(255, 255, 255, 0.247);
+    border: 3px solid #bcbbbd70;
     border-top: none; 
     border-bottom: none;
 }
@@ -175,12 +262,17 @@ header{
     margin-left: 7%;
     margin-right: 7%;
     padding: 7%;
-    border: 3px solid rgba(255, 255, 255, 0.247);
+    border: 3px solid #bcbbbd70;
     border-top: none; 
     border-bottom: none;
 }
 
-
+.multimedia .none{
+    display: none;
+}
+.multimedia .none-active {
+    display: inline-flex;
+}
 .cardScroll{
     display: flex;
     align-items: center;
@@ -216,7 +308,10 @@ header{
     margin-top: 7%;
     margin-bottom: 7%;
 }
-
+.bAnnonce img:hover{
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+    transition: .4s;
+}
 /* partie formulaire */
 .formulaires {
     background-image: linear-gradient(to left top, #19587d, #56708f, #8089a1, #a4a6b2, #c4c4c4);
@@ -225,7 +320,7 @@ header{
 .formulaires .parent-centre {
     margin-left: 7%;
     margin-right: 7%;
-    border: 3px solid rgba(255, 255, 255, 0.247);
+    border: 3px solid #bcbbbd70;
     border-top: none; 
     border-bottom: none;
 }
@@ -298,7 +393,7 @@ input[type=checkbox] {
 .citation {
     margin-left: 7%;
     margin-right: 7%;
-    border: 3px solid rgba(255, 255, 255, 0.247);
+    border: 3px solid #bcbbbd70;
     border-top: none; 
     border-bottom: none;
     height: 80vh;
@@ -327,6 +422,13 @@ input[type=checkbox] {
     margin-left: 2.5px;
     margin-right: 2.5px;
     color: #19587d;
+}
+
+.reveal {
+    display: none;
+}
+.reveal-visible {
+    display: block;
 }
 footer{
     text-align: center;

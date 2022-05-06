@@ -26,16 +26,16 @@
         <!-- la partie accueil au début -->
         <section class="accueil">
             <div class="accueil-content">
-                <p>
+                <p class="fondu">
                     Au nom de ses parents assassinés, Bruce Wayne mène
                     une guerre éternelle contre les criminels de Gotham City. <br>
                     Il est vengeur. Il est la nuit.
                 </p>
-                <p class="bat">Il est Batman.</p>
-                <button>Voir le héros</button>
-                <button>les adversaires</button>
+                <p class="bat fondu">Il est Batman.</p>
+                <a href="#batCinéma"><button class="fondu">Voir le héros</button></a>
+                <a href="#némésis"><button class="fondu">les adversaires</button></a>
             </div>
-            <div class="social-right">
+            <div class="social-right fondu">
                 <a href="index.html"><img src="./Assets/Logos/logo_bat_flèche.png" alt="logo flèche batman haut"></a>
                 <div class="réseaux">
                   <img src="./Assets/Logos/icon_facebook.png" alt=""> 
@@ -49,11 +49,11 @@
     </header> 
     <!-- fin en-tête -->
     <!-- main -->
-    <section class="cinéma">
-            <img class="flèche-bas" src="./Assets/Logos/flèche_down_header.png" alt="">
+    <section class="cinéma" id="batCinéma">
+            <img class="flèche-bas fondu" src="./Assets/Logos/flèche_down_header.png" alt="">
             <div class="description">
                 <h1>batman au cinéma</h1>
-                <p class="sous-itre">
+                <p class="fondu">
                     Le personnage de Batman est un super héros de l’univers de DC Comics. Il a été créé par le 
                     dessinateur Bob Kane et le scénariste Bill Finger et apparaît pour la première fois dans le 
                     comic book Detective Comics en 1939. Batman se différencie de Superman, alors héros 
@@ -61,27 +61,39 @@
                     par Lewis Wilson et bénéficiera de nombreux reboot, donnant l’occasion à de multiples 
                     acteurs d’interpréter l’homme chauve souris. Voici les trois derniers :
                 </p>
-                <div class="cards">
-                    <div class="card1">
+                <div class="cards one">
+                    <div class="card1 zoom">
                         <img src="./Assets/Illustrations/Home/Bathome2.png" alt="">
+                        <div class="acteur">
+                            <img src="./Assets/Illustrations/Home/Robert_Pattinson.png" alt="">
+                            <div><span>Robert Pattinson</span> <br> 2022</div>
+                        </div>
                     </div>
-                    <div class="card2">
+                    <div class="card2 zoom">
                         <img src="./Assets/Illustrations/Home/Bathome3.png" alt="">
+                        <div class="acteur">
+                            <img src="./Assets/Illustrations/Home/Christian_Bale.png" alt="">
+                            <div><span>Robert Pattinson</span> <br> 2022</div>
+                        </div>
                     </div>
-                    <div class="card3">
+                    <div class="card3 zoom">
                         <img src="./Assets/Illustrations/Home/Bathome4.png" alt="">
+                        <div class="acteur">
+                            <img src="./Assets/Illustrations/Home/Ben_Affleck.png" alt="">
+                            <div><span>Robert Pattinson</span> <br> 2022</div>
+                        </div>
                     </div>
                 </div>
             </div>
     </section>
-    <section class="imageChange">
+    <section class="imageChange zoom">
         <div class="border">
 
         </div>
     </section>
-    <section class="nemesis">
+    <section class="nemesis" id="némésis">
         <h1>némésis</h1>
-        <p class="sous-titre">
+        <p class="fondu">
             Batman souhaite éradiquer la criminalité de Gotham. C’est pourquoi, il affrontera la plupart 
             du temps, des vilains sans capacités surnaturelles mais particulièrement violents ou 
             psychopathes. Avec son introduction dans la Justice League il aura l’occasion de se 
@@ -89,23 +101,24 @@
             derniers ennemis emblématiques que nous avons pu voir au cinéma, on retrouve 
         </p>
         <div class="cards">
-            <div class="card1">
+            <div class="card1 zoom">
                 <img src="./Assets/Illustrations/Home/Bathome5.png" alt="">
             </div>
-            <div class="card2">
+            <div class="card2 zoom">
                 <img src="./Assets/Illustrations/Home/Bathome6.png" alt="">
             </div>
-            <div class="card3">
+            <div class="card3 zoom">
                 <img src="./Assets/Illustrations/Home/Bathome7.png" alt="">
             </div>
         </div>
     </section>
     <section class="multimedia">
         <h1>multimédia</h1>
-        <div class="scroll-parent">
-            <img src="./Assets/Logos/Icones en + dans Home/icon_flèche_1.png" alt="">
-        <div class="cardScroll">
-            <img src="./Assets/Illustrations/Home/Bathome8.png" alt="">
+        <div class="scroll-parent zoom">
+            <img class="précédent" src="./Assets/Logos/Icones en + dans Home/icon_flèche_1.png" alt="">
+         <div class="cardScroll">
+             <div class="none none-active">
+                 <img src="./Assets/Illustrations/Home/Bathome8.png" alt="">
             <div class="cardScroll-content">
                 <div class="descript">
                     <p class="card-title">A c t i o n , A d v e n t u r e</p>
@@ -121,11 +134,53 @@
                         dans la lutte contre le crime sous le nom de Batman
                     </p>
                 </div>
-            </div>
+          </div>
+             </div>
+            
+          <div class="none">
+              <img src="./Assets/Illustrations/Home/Bathome10_slide_ba.png" alt="">
+            <div class="cardScroll-content">
+                <div class="descript">
+                    <p class="card-title">A c t i o n , A d v e n t u r e</p>
+                    <p class="card-title2">Batman Begins </p>
+                    <p class="card-title3"></p>
+                    <p>
+                        Le jeune Bruce Wayne assiste impuissant au meurtre de ses 
+                        parents. Profondément traumatisé, il grandit obnubilé par un 
+                        désir de vengeance. La Ligue des ombres, une secte de 
+                        guerriers ninja dirigée par Ra's al Ghul, se chargera de son 
+                        entraînement. De retour chez lui à Gotham, avec l'aide de son 
+                        majordome Alfred Pennyworth, Bruce Wayne se lance alors 
+                        dans la lutte contre le crime sous le nom de Batman
+                    </p>
+                </div>
+          </div>
+          </div>
+          
+          <div class="none">
+              <img src="./Assets/Illustrations/Home/Bathome11_slide_ba.png" alt="">
+            <div class="cardScroll-content">
+                <div class="descript">
+                    <p class="card-title">A c t i o n , A d v e n t u r e</p>
+                    <p class="card-title2">Batman Begins </p>
+                    <p class="card-title3"></p>
+                    <p>
+                        Le jeune Bruce Wayne assiste impuissant au meurtre de ses 
+                        parents. Profondément traumatisé, il grandit obnubilé par un 
+                        désir de vengeance. La Ligue des ombres, une secte de 
+                        guerriers ninja dirigée par Ra's al Ghul, se chargera de son 
+                        entraînement. De retour chez lui à Gotham, avec l'aide de son 
+                        majordome Alfred Pennyworth, Bruce Wayne se lance alors 
+                        dans la lutte contre le crime sous le nom de Batman
+                    </p>
+                </div>
+          </div>
+          </div>
+          
         </div>
-        <img src="./Assets/Logos/Icones en + dans Home/icon_flèche_2.png" alt="">
+        <img class="suivant" src="./Assets/Logos/Icones en + dans Home/icon_flèche_2.png" alt="">
         </div>
-        <div class="bAnnonce">
+        <div class="bAnnonce fondu">
             <a href="https://youtu.be/hGQo1axtj60"><img src="./Assets/Illustrations/Home/Bathome9_ba.png" alt=""></a>
         </div>
     </section>
@@ -134,26 +189,26 @@
             <div class="centre">
                     <h1>prenons contact</h1>
                    <form action="">
-                      <h2>adresse email</h2>
-                     <input type="email" placeholder="Adresse email">
-                    <h2>newsletter</h2>
-                        <p class="para">En cochant cette case vous acceptez de recevoir l’actualité concernant les 
-                         aventures de Batman : <input type="checkbox"></p>
-                        <select name="fréquence" id="">
+                      <h2 class="fondu">adresse email</h2>
+                     <input class="fondu" type="email" placeholder="Adresse email">
+                    <h2 class="fondu">newsletter</h2>
+                        <p class="para fondu">En cochant cette case vous acceptez de recevoir l’actualité concernant les 
+                         aventures de Batman : <input class="fondu" type="checkbox"></p>
+                        <select class="fondu" name="fréquence" id="">
                          <option value="">Choisissez la fréquence à laquelle vous souhaitez recevoir votre newslette</option>
                         <option value="jour">Par jour</option>
                         <option value="semaine">Par semaine</option>
                          <option value="mois">Par mois</option>
                     </select>
-                        <input type="text" placeholder="Souhaitez vous recevoir des news ">
+                        <input class="fondu" type="text" placeholder="Souhaitez vous recevoir des news ">
                         <div class="bouttonSérie">
-                            <button class="outline-degrade">Des films</button>
-                            <button class="outline-degrade">Des comics</button>
-                            <button class="outline-degrade">Des tout</button>
+                            <button class="outline-degrade fondu">Des films</button>
+                            <button class="outline-degrade fondu">Des comics</button>
+                            <button class="outline-degrade fondu">Des tout</button>
                         </div>
-                        <h2>message</h2>
-                        <input type="textarea" placeholder="Laissez un commentaire pour la communauté">
-                        <button class="confirm">confirmer</button>
+                        <h2 class="fondu">message</h2>
+                        <input class="fondu" type="textarea" placeholder="Laissez un commentaire pour la communauté">
+                        <button class="confirm fondu">confirmer</button>
                     </form>
             </div>
             
@@ -161,22 +216,111 @@
     </section>
     <section class="citationBox">
         <div class="citation">
-            <img class="quote1" src="./Assets/Logos/Icones en + dans Home/icon_guillemets_1.png" alt="">
-            <img class="quote2" src="./Assets/Logos/Icones en + dans Home/icon_guillemets_2.png" alt="">
-            <p>
-                La seule façon raisonnable de vivre en ce bas monde, <br>
-                c'est en dehors des règles
-            </p>
-            <p class="dark">
-                The Dark Knight : Le Chevalier Noir -<br>
-                Le Joker à Batman (2008)
-            </p>
-            <div class="dot">
+            <img class="quote1 fondu" src="./Assets/Logos/Icones en + dans Home/icon_guillemets_1.png" alt="">
+            <img class="quote2 fondu" src="./Assets/Logos/Icones en + dans Home/icon_guillemets_2.png" alt="">
+            <div class="slide-citation">
+                <div class="slideCit1 reveal reveal-visible">
+                    <p class="fondu">
+                        La seule façon raisonnable de vivre en ce bas monde, <br>
+                        c'est en dehors des règles
+                    </p>
+                    <p class="dark fondu">
+                        The Dark Knight : Le Chevalier Noir -<br>
+                        Le Joker à Batman (2008)
+                    </p>
+                </div>
+                <div class="slideCit2 reveal">
+                    <p class="fondu">
+                        Soit on meurt en héros, soit on vit assez longtemps <br>
+                        pour se voire endosser le rôle du méchant
+                    </p>
+                    <p class="dark fondu">
+                        The Dark Knight : Le Chevalier Noir -<br>
+                        Harvey Dent (2008)
+                    </p>
+                </div>
+                <div class="slideCit3 reveal">
+                    <p class="fondu">
+                        Le héros peut être en chacun, même en celui qui fait une chose  <br>
+                        ausssi simple et rassurante que mettre un manteau sur le épaules d'un <br>
+                        garçon et aussi lui faire comprendre que le monde ne s'est pas écroulé.
+                    </p>
+                    <p class="dark fondu">
+                        The Dark Knight Rises: Batman à James Gordon (2012)
+                    </p>
+                </div>
+                <div class="slideCit4 reveal">
+                    <p class="fondu">
+                        Ah ! Tu crois que l'obscurité est ton allié. Tu n'a fait qu'adopter <br>
+                        la pénombre. Moi je suis né dedans, j'ai été façonné par elle. <br>
+                        Je n'ai découvert la lumière qu'a l'âge d'homme, et alors, <br>
+                        elle m'a juste paru AVEUGLANTE ! 
+                    </p>
+                    <p class="dark fondu">
+                        The Dark Knight Rises - Bane à Batman (2012)
+                    </p>
+                </div>
+                <div class="slideCit5 reveal">
+                    <p class="fondu">
+                        - Je vous prépare la batmoto monsieur ? <br>
+                        - En pleine journée Alfred ? Pas très subtile. <br>
+                        - La Lamborghini alors... beaucoup plus subtile.
+
+                    </p>
+                    <p class="dark fondu">
+                        The Dark Knight: Le Chevalier Noir - <br>
+                        Alfred et Batman (2008)
+                    </p>
+                </div>
+                <div class="slideCit6 reveal">
+                    <p class="fondu">
+                        Freeze, t'es givré !
+                    </p>
+                    <p class="dark fondu">
+                        Batman & Robin - Batman à Mr Freeze (1997)
+                    </p>
+                </div>
+                <div class="slideCit7 reveal">
+                    <p class="fondu">
+                        La peur est un outil. Cette lumière qui déchire le ciel, <br>
+                        ce n’est pas qu’un appel à l’aide. C’est un avertissement.
+                    </p>
+                    <p class="dark fondu">
+                        Batman - Batman (2022)
+                    </p>
+                </div>
+                <div class="slideCit8 reveal">
+                    <p class="fondu">
+                        - Pourquoi tombons nous Bruce ? <br>
+                        - … <br>
+                        - Pour mieux apprendre à nous relever.
+
+                    </p>
+                    <p class="dark fondu">
+                        Batman Begins - Thomas Wayne à  <br>
+                        Bruce Wayne 8 ans (2005)
+                    </p>
+                </div>
+                <div class="slideCit9 reveal">
+                    <p class="fondu">
+                        Des hommes tombent du ciel, les dieux crachent la foudre, des innoncents <br>
+                         meurent. C’est comme cela que ça commence, monsieur. De la fureur, de la fièvre, <br>
+                          un sentiment d’impuissance, qui rend les hommes bien… cruels.
+
+                    </p>
+                    <p class="dark fondu">
+                        Batman v Superman : l’aube de la justice, <br>
+                         Alfred à Batman (2016)
+                    </p>
+                </div>
+               
+            </div>
+            <div class="dot fondu">
                 <i class="fa-regular fa-circle"></i>
                 <i class="fa-regular fa-circle"></i>
                 <i class="fa-regular fa-circle"></i>
                 <i class="fa-regular fa-circle"></i>
-                <i class="fa-regular fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
                 <i class="fa-regular fa-circle"></i>
                 <i class="fa-regular fa-circle"></i>
                 <i class="fa-regular fa-circle"></i>
@@ -186,7 +330,7 @@
         </div>
         <!-- fin main -->
     </section>
-    <footer id="bas">
+    <footer id="bas" class="fondu">
        <img src="./Assets/Logos/icon_WB.png" alt=""><p class="inline"> Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & Snyder & Reeves</p>
         <div class="parentLogo">
            <div class="logoSayna">
@@ -200,12 +344,11 @@
                 <a href=""><img src="./Assets/Logos/icon_tw.png" alt=""></a>
            </div>
         </div>
-
-
-
-        <!-- lien vers le fichier js -->
-        <script src="./JS/index.js"></script>
         
     </footer>
+
+  <!-- lien vers le fichier js -->
+        <script src="./JS/index.js"></script>
+
 </body>
 </html>
