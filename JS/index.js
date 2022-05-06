@@ -96,6 +96,7 @@ document.querySelectorAll('.zoom').forEach(function(r) {
 });
 
 //effet zoom sur les images au survole
+// premiers cards
 const imgActeurs = document.querySelectorAll('.one .zoom');
 const imgActeur1 = imgActeurs[0];
 const imgActeur2 = imgActeurs[1];
@@ -127,13 +128,51 @@ imgActeur3.addEventListener('mouseout', function () {
     acteur3.classList.remove('acteur-visible');
 })
 
+//deuxième cards
+
+const acts = document.querySelectorAll('.two .zoom');
+const act1 = acts[0];
+const act2 = acts[1];
+const act3 = acts[2];
+
+const perss = document.querySelectorAll('.two .acteur');
+const pers1 = perss[0];
+const pers2 = perss[1];
+const pers3 = perss[2];
+
+act1.addEventListener('mouseover', function (e) {
+    pers1.classList.add('acteur-visible');
+})
+act1.addEventListener('mouseout', function (e) {
+    pers1.classList.remove('acteur-visible');
+})
+
+act2.addEventListener('mouseover', function (e) {
+    pers2.classList.add('acteur-visible');
+})
+act2.addEventListener('mouseout', function (e) {
+    pers2.classList.remove('acteur-visible');
+})
+
+act3.addEventListener('mouseover', function (e) {
+    pers3.classList.add('acteur-visible');
+})
+act3.addEventListener('mouseout', function (e) {
+    pers3.classList.remove('acteur-visible');
+})
+
 //slider dans la partie nemesis
+const bA = document.getElementsByTagName('iframe');
 
 const imgSlide = document.querySelectorAll('.multimedia .none');
 const nbSlide = imgSlide.length;
 const precedent = document.querySelector('.précédent');
 const suivant = document.querySelector('.suivant');
 let count = 0;
+let srcs = ["https://www.youtube.com/embed/jXrFsn9pcZY",
+            "https://www.youtube.com/embed/UMgb3hQCb08", 
+            "https://www.youtube.com/embed/OiqPQ7L_C00"
+           ]
 
 function slideSuivant () {
     imgSlide[count].classList.remove('none-active');
@@ -145,6 +184,7 @@ function slideSuivant () {
     }
 
     imgSlide[count].classList.add('none-active');
+    bA[0].src = srcs[count];
 }
 
 suivant.addEventListener('click', slideSuivant);
@@ -159,8 +199,45 @@ function slidePrécédent () {
     }
 
     imgSlide[count].classList.add('none-active');
+    bA[0].src = srcs[count];
 }
 
 precedent.addEventListener('click', slidePrécédent);
 
-//slider avec les citations qui défile autromatique 
+//affichage du pop up lorsque le formulaire a été envoyé
+
+const confirm = document.querySelector('.confirm');
+const popUp = document.querySelector('.pop-up');
+const inputs = document.querySelectorAll('input.fondu, select.fondu');
+const email = inputs[0];
+const checkbox = inputs[1];
+const select = inputs[2];
+const news = inputs[3];
+const message = inputs[4]; 
+
+let erreur;
+confirm.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if(!email.value) {
+        erreur = 'Veuillez entrez votre mail';
+    }
+    if(!news.value) {
+        erreur = 'Veuillez entrez votre votre choix';
+    }
+    if(!checkbox.checked) {
+        erreur = 'Veillez cochez le checkbox';
+    }
+    if(!message.value) {
+        erreur = 'Veuillez entrez un message';
+    }
+    if(erreur) {
+        document.getElementById('erreur').innerHTML = erreur;
+    } else {
+        //on affiche le popUp
+
+        popUp.classList.add('popUp-reveal');
+
+    }
+    
+})

@@ -21,10 +21,12 @@ h1 {
     text-transform: uppercase;
     line-height: 48px;
 }
-
+#quiz1 h1, #quiz2 h1{
+    font-size: 35px!important;
+}
 p{
     font-family:'Space Grotesk', sans-serif;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 button {
@@ -103,8 +105,55 @@ header{
     .réseaux img {
         margin: 25px 37px 12px;
     }
+/* main */
+  .flèche {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-top: 5%;
+      margin-bottom: 13%;
+  }
+    /* quiz niveau 1 */
+    #quiz1 {
+        margin-left: 7%;
+        margin-right: 7%;
+        padding-left: 5%;
+        border: 3px solid rgba(255, 255, 255, 0.247);
+        border-bottom: none;
+        border-top: none;
+    }
 
+    .one p:first-child{
+        margin-top: 7%;
+        margin-bottom: 4%;
+       
+    }
+    .one p:nth-child(2), 
+    .one p:nth-child(3),
+    .one p:nth-child(4)
+    {
+        padding: .8em .2em;
+        margin-bottom: .5em;
+        background: #C4C4C4;
+        width: 50%;
+    }
 
+    /* quiz 2 */
+    #quiz2{
+        padding-top: 13%;
+        margin-left: 7%;
+        margin-right: 7%;
+        padding-left: 5%;
+    }
+    #quiz2 h1 {
+        text-align: center;
+    }
+    #quiz2 div {
+        margin: 3% 8%;
+    }
+    #quiz2 button{
+        margin-left: 42%;
+        margin-bottom: 11%;
+    }
 
 
 /* partie footer */
@@ -114,6 +163,7 @@ footer{
 }
 .inline {
     display: inline;
+    font-size: 12px;
 }
 .parentLogo {
     display: flex;
