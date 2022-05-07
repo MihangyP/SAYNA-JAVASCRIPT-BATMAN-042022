@@ -241,3 +241,5 @@ confirm.addEventListener('click', function (e) {
     }
     
 })
+
+//changement automatique du citation

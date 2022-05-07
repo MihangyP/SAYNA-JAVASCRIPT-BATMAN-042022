@@ -457,9 +457,12 @@ input[type=checkbox] {
 .reveal {
     display: none;
 }
+
 .reveal-visible {
     display: block;
 }
+
+
 footer{
     text-align: center;
     padding-bottom: 5%;
