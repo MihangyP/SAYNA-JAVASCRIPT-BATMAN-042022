@@ -243,3 +243,23 @@ confirm.addEventListener('click', function (e) {
 })
 
 //changement automatique du citation
+
+
+let citations = document.querySelectorAll('.reveal');
+   let numberSlide = citations.length;
+   let counter = 0;
+
+
+function autoCit () {
+   
+   citations[counter].classList.remove('reveal-visible');
+   if(counter < numberSlide - 1) {
+       counter++;
+   } else {
+       counter = 0;
+   }
+
+   citations[counter].classList.add('reveal-visible');
+}
+
+const intervalID = setInterval(autoCit, 3000);
